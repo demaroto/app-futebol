@@ -1,4 +1,4 @@
-<x-layout>
+<x-layouts>
     <x-slot:header>
         Cadastre-se
     </x-slot:header>
@@ -73,4 +73,4 @@
     </div>
 
 
-</x-layout>
+</x-layouts>

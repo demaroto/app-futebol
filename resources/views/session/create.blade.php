@@ -1,4 +1,4 @@
-<x-layout>
+<x-layouts>
   <x-slot:header>
     Login
   </x-slot:header>
@@ -39,4 +39,4 @@
 
 
 
-</x-layout>
+</x-layouts>
