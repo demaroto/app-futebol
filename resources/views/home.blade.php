@@ -1,4 +1,4 @@
-<x-layout>
+<x-layouts>
     <x-slot:header>
         Seja Bem-Vindo!
     </x-slot:header>
@@ -8,4 +8,4 @@
 
     
 
-</x-layout>
+</x-layouts>
