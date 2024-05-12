@@ -3,8 +3,8 @@
 namespace App\Dto\Player;
 
 use Illuminate\Contracts\Validation\Validator;
-use App\Dto\AbstractDTO;
-use App\Dto\InterfaceDTO;
+use App\Dto\AbstractDto;
+use App\Dto\InterfaceDto;
 
 class PlayerEditInputDto extends AbstractDto implements InterfaceDto
 {

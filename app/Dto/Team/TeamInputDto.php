@@ -3,7 +3,7 @@
 namespace App\Dto\Team;
 
 use Illuminate\Contracts\Validation\Validator;
-use App\Dto\AbstractDTO;
+use App\Dto\AbstractDto;
 use App\Dto\InterfaceDTO;
 
 class TeamInputDto extends AbstractDto implements InterfaceDto

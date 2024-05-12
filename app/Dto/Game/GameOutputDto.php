@@ -3,7 +3,7 @@
 namespace App\Dto\Game;
 
 use Illuminate\Contracts\Validation\Validator;
-use App\Dto\AbstractDTO;
+use App\Dto\AbstractDto;
 use App\Dto\InterfaceDto;
 
 class GameOutputDto extends AbstractDto implements InterfaceDto
