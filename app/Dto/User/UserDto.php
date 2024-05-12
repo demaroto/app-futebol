@@ -4,7 +4,7 @@ namespace App\Dto\User;
 
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Validation\Rules\Password;
-use App\Dto\AbstractDTO;
+use App\Dto\AbstractDto;
 use App\Dto\InterfaceDto;
 
 class UserDto extends AbstractDto implements InterfaceDto
