@@ -31,7 +31,7 @@ class PlayersController extends Controller
         $player = $playerService->findOnePlayer($id);
         $nextGame = $gameService->next();
         
-        $gamePlayer = array_filter($nextGame->gamePlayers->toArray(), fn($q) => $q['player_id'] == $id);
+        $gamePlayer = count($nextGame) ? array_filter($nextGame->gamePlayers->toArray(), fn($q) => $q['player_id'] == $id) : [];
         $gamePlayer = count($gamePlayer) ? array_values($gamePlayer) : [];
            
         return view('players.edit', ['player' => $player, 'gamePlayer' => $gamePlayer, 'game' => $nextGame]);
