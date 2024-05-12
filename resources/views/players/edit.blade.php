@@ -1,4 +1,4 @@
-<x-layout>
+<x-layouts>
     <x-slot:header>
         Editar Jogador - {{ $player->user->nickname }}
     </x-slot:header>
@@ -93,4 +93,4 @@
             </div>
         @endif
     </div>
-</x-layout>
+</x-layouts>

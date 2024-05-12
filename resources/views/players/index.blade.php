@@ -1,4 +1,4 @@
-<x-layout>
+<x-layouts>
     <x-slot:header>
         Jogadores
     </x-slot:header>
@@ -26,4 +26,4 @@
         @endforeach
     </ul>
     {{ $players->links() }}
-</x-layout>
+</x-layouts>

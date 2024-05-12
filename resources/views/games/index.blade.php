@@ -1,4 +1,4 @@
-<x-layout>
+<x-layouts>
     <x-slot:header>
         <div class="flex justify-between">
             <div>Partidas de Futebol</div>
@@ -113,4 +113,4 @@
     @endif
 
 
-</x-layout>
+</x-layouts>

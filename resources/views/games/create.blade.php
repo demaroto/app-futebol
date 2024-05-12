@@ -1,4 +1,4 @@
-<x-layout>
+<x-layouts>
     <x-slot:header>
         Criar Partida
     </x-slot:header>
@@ -35,4 +35,4 @@
 
     
 
-</x-layout>
+</x-layouts>

@@ -1,4 +1,4 @@
-<x-layout>
+<x-layouts>
     <x-slot:header>
       {{ $player->goalkeeper ? 'Goleiro' : 'Jogador' }} - {{ $player->user->nickname}}
     </x-slot:header>
@@ -22,4 +22,4 @@
           </li>
        
     </ul>
-</x-layout>
+</x-layouts>
