@@ -18,6 +18,9 @@
                 <p class="text-gray-900 text-base">
                     Próxima partida será no dia {{ date('d/m/Y', strtotime($game->date)) }}
                 </p>
+                <p class="text-gray-900 text-base">
+                    Time com {{ $game->limit_players - 1 }} Jogadores e 1 Goleiro.
+                </p>
             </div>
             <div class="px-6 pt-4 pb-2">
                 <span
@@ -56,7 +59,7 @@
                 @endif
             </div>
             <div class="px-6 py-4">
-                <div class="font-bold text-xl mb-2">Jogadores ({{ $players->count() }}) - Confirmados: ( {{ $gamePlayer->where('confirmed', 1)->count() }} )</div>
+                <div class="font-bold text-xl mb-2">Jogadores ({{ $players->count() }}) - Confirmados: ({{ $gamePlayer->where('confirmed', 1)->count() }})</div>
                 @if ($errors->any())
                     @foreach ($errors->all() as $error)
                         <div>{{ $error }}</div>
