@@ -33,7 +33,7 @@ class GameService
         $playersWithTeam = $gameRepository->gamePlayers->filter(fn ($qr) => $qr['team_id'] != null)->count();
         //Todos os players
         $playerAll = $gameRepository->players;
-   
+        
         //Ajustando goleiros que confirmaram presença
         foreach ($playerAll->toArray() as $v) {
             foreach ($gameRepository->gamePlayers->toArray() as $j) {
@@ -50,7 +50,7 @@ class GameService
                 }
             }
         }
-
+        
         $countPlayers = array_count_values(array_column($players, 'goalkeeper'));
         $goalkeepers = in_array(1, array_keys($countPlayers)) ? $countPlayers[1] : 0;
         $playersLine = in_array(0, array_keys($countPlayers)) ? $countPlayers[0] : 0;
@@ -68,8 +68,8 @@ class GameService
             //Criar os teams
             for ($x = 0; $x < $teamsTotal; $x++) {
                 $teamService = new TeamService();
-                $faker = Factory::create();
-                $teams[$x] = $teamService->createTeam($faker->country(), $idGame);
+                $team_name = 'Time ' . ($x + 1);
+                $teams[$x] = $teamService->createTeam($team_name, $idGame);
             
             }
 
