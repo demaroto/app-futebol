@@ -18,7 +18,7 @@ class GameInputDto extends AbstractDto implements InterfaceDto
     public function rules(): array
     {
         return [
-            'date' => 'required|date_format:Y-m-d',
+            'date' => 'required|date_format:Y-m-d|unique:games,date',
             'limit_players' => 'required|min:1|max:11'
         ];
     }
@@ -27,6 +27,7 @@ class GameInputDto extends AbstractDto implements InterfaceDto
     {
         return [
             'date' => 'Você precisa definir uma data no formato Y-m-d H:i:s.',
+            'date.unique' => 'Já existe uma partida com esta data',
             'limit_players' => 'Você precisa definir um numero entre 1 e 11.',
         ];
     }
