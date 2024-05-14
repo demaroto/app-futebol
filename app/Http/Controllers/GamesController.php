@@ -18,7 +18,9 @@ class GamesController extends Controller
         $players = $playerService->getAll();
         $gamePlayerService = new GamePlayerService();
         $gamePlayer = $game ? $gamePlayerService->findByGameId($game->id) : [];
-    
+       if (count($gamePlayer)) 
+            $gameService->checkPlayer($game->id);
+       
         return view('games.index', [
             'game' => $game,
             'players' => $players,

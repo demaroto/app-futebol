@@ -56,7 +56,7 @@
                 @endif
             </div>
             <div class="px-6 py-4">
-                <div class="font-bold text-xl mb-2">Jogadores ({{ $players->count() }})</div>
+                <div class="font-bold text-xl mb-2">Jogadores ({{ $players->count() }}) - Confirmados: ( {{ $gamePlayer->where('confirmed', 1)->count() }} )</div>
                 @if ($errors->any())
                     @foreach ($errors->all() as $error)
                         <div>{{ $error }}</div>
