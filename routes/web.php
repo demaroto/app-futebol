@@ -27,6 +27,9 @@ Route::middleware(['auth'])->group(function(){
     Route::group(['prefix' => 'games'], function(){
         Route::get('/', [GamesController::class, 'index'])->name('games.index');
         Route::get('/create', [GamesController::class, 'create'])->name('games.create');
+        Route::get('/{id}/edit', [GamesController::class, 'edit'])->name('games.edit');
+        Route::delete('/{id}', [GamesController::class, 'delete'])->name('games.delete');
+        Route::put('/{id}', [GamesController::class, 'update'])->name('games.update');
         Route::post('/store', [GamesController::class, 'store'])->name('games.store');
     });
 

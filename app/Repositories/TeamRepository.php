@@ -12,7 +12,6 @@ class TeamRepository extends AbstractRepository
         return self::model()::query()
             ->with('game')
             ->with('players')
-            ->with('user')
             ->with('gamePlayers')
             ->where(['game_id' => $game_id])->get();
     }
@@ -20,6 +19,11 @@ class TeamRepository extends AbstractRepository
     public static function deleteByGameId($game_id)
     {
         return self::model()::query()->where(['game_id' => $game_id])->delete();
+    }
+
+    public static function getTeamsEmpty($game_id)
+    {
+        return self::model()::query()->with('gamePlayers')->where(['game_id' => $game_id])->get();
     }
 
 }

@@ -25,4 +25,9 @@ class GamePlayerRepository extends AbstractRepository
         return self::model()::query()->where(['game_id' => $game_id])->update($value);
     }
 
+    public static function deleteByGameId($game_id)
+    {
+        return self::model()::query()->where(['game_id' => $game_id])->delete();
+    }
+
 }

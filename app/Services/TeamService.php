@@ -28,4 +28,10 @@ class TeamService {
         $repository = TeamRepository::deleteByGameId($game_id);
     }
 
+    public function countByGameId($game_id)
+    {
+        $repository = TeamRepository::findByGameId($game_id)->count();
+        return $repository;
+    }
+
 }

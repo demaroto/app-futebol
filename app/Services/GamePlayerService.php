@@ -34,6 +34,11 @@ class GamePlayerService {
         return;
     }
 
+    public function deleteByGameId($id)
+    {
+        GamePlayerRepository::deleteByGameId($id);
+    }
+
     public function findByGameId($id)
     {
         $repository = GamePlayerRepository::findByGameId($id);

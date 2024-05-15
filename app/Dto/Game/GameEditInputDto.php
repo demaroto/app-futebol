@@ -6,11 +6,12 @@ use Illuminate\Contracts\Validation\Validator;
 use App\Dto\AbstractDto;
 use App\Dto\InterfaceDto;
 
-class GameInputDto extends AbstractDto implements InterfaceDto
+class GameEditInputDto extends AbstractDto implements InterfaceDto
 {
     public function __construct(
         public readonly string $date,
         public readonly string $limit_players,
+        public readonly int $id
     ) {
         $this->validate();
     }
@@ -18,8 +19,9 @@ class GameInputDto extends AbstractDto implements InterfaceDto
     public function rules(): array
     {
         return [
-            'date' => 'required|date_format:Y-m-d|unique:games,date',
-            'limit_players' => 'required|integer|min:2|max:11'
+            'date' => 'required|date_format:Y-m-d',
+            'limit_players' => 'required|integer|min:2|max:11',
+            'id' => 'required|integer|min:1',
         ];
     }
 
@@ -27,8 +29,7 @@ class GameInputDto extends AbstractDto implements InterfaceDto
     {
         return [
             'date' => 'Você precisa definir uma data no formato Y-m-d H:i:s.',
-            'date.unique' => 'Já existe uma partida com esta data',
-            'limit_players' => 'Você precisa definir um numero entre 2 e 11.',
+            'limit_players' => 'Você precisa definir um numero entre 2 e 11.'
         ];
     }
 
