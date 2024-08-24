@@ -9,4 +9,22 @@
 
 ## App Futebol
 Este projeto foi desenvolvido utilizando em Laravel 11, o propósito app é agendar as partidas de futebol.
- 
+
+### Instalação para ambiente de desenvolvimento (SQLite)
+1. Duplique o arquivo .env.example e renomeie para .env
+2. Crie o arquivo database.sqlite na pasta database do projeto, caso não exista.
+3. Execute a criação das tabelas, com o comando abaixo no terminal:
+```
+php artisan migrate
+```
+4. Caso queira criar alguns usuários jogadores fake, execute o comando abaixo no terminal:
+```
+php artisan db:seed
+```
+5. Execute o servidor com o comando abaixo:
+```
+php artisan serve
+``` 
+6. Acesse no seu navegador:
+[http://localhost:8000](http://localhost:8000)
+
